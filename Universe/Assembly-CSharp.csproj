@@ -54,7 +54,24 @@
      <Compile Include="Assets\IoCFramework\Interfaces\IIoCContainer.cs" />
      <Compile Include="Assets\IoCFramework\Interfaces\IServiceLocator.cs" />
      <Compile Include="Assets\IoCFramework\Unity3dIoCContainer.cs" />
+     <Compile Include="Assets\Scripts\Core\IProbabilityItem.cs" />
+     <Compile Include="Assets\Scripts\Core\ProbabilityGenerator.cs" />
+     <Compile Include="Assets\Scripts\Core\RandomGenerator.cs" />
+     <Compile Include="Assets\Scripts\Core\Tuple.cs" />
      <Compile Include="Assets\Scripts\Startup\Bootstrapper.cs" />
+     <Compile Include="Assets\Scripts\Zone\IZone.cs" />
+     <Compile Include="Assets\Scripts\Zone\Orbital\IOrbital.cs" />
+     <Compile Include="Assets\Scripts\Zone\Orbital\RockyPlanet.cs" />
+     <Compile Include="Assets\Scripts\Zone\SystemCenter\BlueGiantStar.cs" />
+     <Compile Include="Assets\Scripts\Zone\SystemCenter\ISystemCenter.cs" />
+     <Compile Include="Assets\Scripts\Zone\SystemCenter\ISystemCenterFactory.cs" />
+     <Compile Include="Assets\Scripts\Zone\SystemCenter\NeutronStar.cs" />
+     <Compile Include="Assets\Scripts\Zone\SystemCenter\RedDwarfStar.cs" />
+     <Compile Include="Assets\Scripts\Zone\SystemCenter\SystemCenterFactory.cs" />
+     <Compile Include="Assets\Scripts\Zone\SystemCenter\WhiteDwarfStar.cs" />
+     <Compile Include="Assets\Scripts\Zone\SystemCenter\YellowStar.cs" />
+     <Compile Include="Assets\Scripts\Zone\Zone.cs" />
+     <Compile Include="Assets\Scripts\Zone\ZoneFactory.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
