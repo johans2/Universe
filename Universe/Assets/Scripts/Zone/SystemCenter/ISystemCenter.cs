@@ -1,4 +1,6 @@
-﻿namespace PseudoRandom
+﻿using Universe.Core.Generation;
+
+namespace Universe.Game
 {
     public interface ISystemCenter : IProbabilityItem
     {

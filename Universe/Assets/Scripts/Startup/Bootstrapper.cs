@@ -6,6 +6,8 @@ public class Bootstrapper : AbstractBootstrapper
 {
 	public override void Configure(IIoCContainer container)
 	{
+        container.Register<IInjectedClass, InjectedClass>();
+
 		// Example code
 		/*
 		// non  singleton

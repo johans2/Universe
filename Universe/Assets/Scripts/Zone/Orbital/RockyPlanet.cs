@@ -1,5 +1,6 @@
-﻿
-namespace PseudoRandom
+﻿using Universe.Game;
+
+namespace Universe.Core.Generation
 {
     public class RockyPlanet : IOrbital
     {

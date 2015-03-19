@@ -1,5 +1,5 @@
 ﻿
-namespace PseudoRandom
+namespace Universe.Game
 {
     public class RedDwarfStar : ISystemCenter
     {

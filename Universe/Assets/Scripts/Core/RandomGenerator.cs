@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PseudoRandom
+namespace Universe.Core.Generation
 {
     public static class RandomGenerator
     {

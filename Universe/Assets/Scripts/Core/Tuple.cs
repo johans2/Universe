@@ -3,12 +3,12 @@ namespace Universe.Core.Collections
 {
 	public class Tuple<T1, T2>
 	{
-		public T1 First { get; private set; }
-		public T2 Second { get; private set; }
-		internal Tuple (T1 first, T2 second)
+		public T1 Item1 { get; private set; }
+		public T2 Item2 { get; private set; }
+		internal Tuple (T1 item1, T2 item2)
 		{
-			First = first;
-			Second = second;
+			Item1 = item1;
+			Item2 = item2;
 		}
 	}
 }

@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using Universe.Core.Generation;
 
-namespace PseudoRandom
+namespace Universe.Game
 {
     public class ZoneFactory
     {

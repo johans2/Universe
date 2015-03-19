@@ -1,6 +1,6 @@
 using System;
 
-namespace PseudoRandom
+namespace Universe.Core.Generation
 {
 	public interface IProbabilityItem
 	{

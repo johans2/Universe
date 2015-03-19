@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
 using Universe.Core.Collections;
+using Universe.Core.Generation;
 
-namespace PseudoRandom
+namespace Universe.Game
 {
 	public class SystemCenterFactory : ISystemCenterFactory
 	{
@@ -19,7 +20,7 @@ namespace PseudoRandom
 		{
 			foreach (KeyValuePair<IProbabilityItem, Tuple<int,int>> s in systemCenterIntervals) 
 			{
-				if (s.Value.First < seed && seed < s.Value.Second) {
+				if (s.Value.Item1 < seed && seed < s.Value.Item2) {
 					ISystemCenter systemCenter = (ISystemCenter)Activator.CreateInstance(s.Key.GetType());
 					if (distance > systemCenter.MinDistanceFromCenter) {
 						return systemCenter;

@@ -1,4 +1,4 @@
-﻿namespace PseudoRandom
+﻿namespace Universe.Game
 {
     public interface IOrbital
     {
