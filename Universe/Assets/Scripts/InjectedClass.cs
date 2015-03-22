@@ -5,9 +5,16 @@ using System.Text;
 
 public class InjectedClass : IInjectedClass
 {
+    private string testString;
+
+    public InjectedClass() 
+    {
+        this.testString = "This is injected!";
+    }
+
     public string TheString 
     {
-        get { return "This is injected!"; }
+        get { return this.testString; }
     }
 }
 
