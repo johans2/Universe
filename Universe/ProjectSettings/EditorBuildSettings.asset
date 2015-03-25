@@ -7,3 +7,5 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/Scenes/HomeWorldScene.unity
+  - enabled: 0
+    path: Assets/Scenes/SpaceScene.unity

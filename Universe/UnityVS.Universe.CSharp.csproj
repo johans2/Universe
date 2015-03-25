@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Core\Tuple.cs" />
     <Compile Include="Assets\Scripts\IInjectedClass.cs" />
     <Compile Include="Assets\Scripts\InjectedClass.cs" />
+    <Compile Include="Assets\Scripts\PlaneBehaviour.cs" />
     <Compile Include="Assets\Scripts\Startup\Bootstrapper.cs" />
     <Compile Include="Assets\Scripts\TestIocBehaviour.cs" />
     <Compile Include="Assets\Scripts\Zone\IZone.cs" />

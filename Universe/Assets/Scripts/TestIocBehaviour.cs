@@ -15,6 +15,6 @@ public class TestIocBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(injectedClass.TheString);
+        //Debug.Log(injectedClass.TheString);
 	}
 }
