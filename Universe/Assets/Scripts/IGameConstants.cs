@@ -3,7 +3,9 @@ namespace Universe.Game {
 
     public interface IGameConstants 
     {
-        int ZoneSize { get; }
+        float ZoneSize { get; }
+
+        float SnapBackWorldDistance { get; }
     }
 
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Universe.Core.Collections;
 
+
 namespace Universe.Core.Generation
 {
 	public static class ProbabilityGenerator

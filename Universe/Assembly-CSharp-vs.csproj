@@ -55,6 +55,7 @@
      <Compile Include="Assets\IoCFramework\Interfaces\IServiceLocator.cs" />
      <Compile Include="Assets\IoCFramework\Unity3dIoCContainer.cs" />
      <Compile Include="Assets\Scripts\Core\IProbabilityItem.cs" />
+     <Compile Include="Assets\Scripts\Core\MathU.cs" />
      <Compile Include="Assets\Scripts\Core\ProbabilityGenerator.cs" />
      <Compile Include="Assets\Scripts\Core\RandomGenerator.cs" />
      <Compile Include="Assets\Scripts\Core\Tuple.cs" />

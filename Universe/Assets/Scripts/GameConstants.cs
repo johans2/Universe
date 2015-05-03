@@ -6,9 +6,15 @@ namespace Universe.Game
 
     public class GameConstants : IGameConstants 
     {
-        public int ZoneSize
+        public float ZoneSize
         {
-            get { return 100; }
+            get { return 100f; }
+        }
+
+
+        public float SnapBackWorldDistance
+        {
+            get { return 1000f; }
         }
     }
 }
