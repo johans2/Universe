@@ -55,6 +55,7 @@ namespace Universe.Game
                 // Fire EnterZone event if calculated new zone differs from current one.
                 if (zone.Item1 != currentZone.Item1 || zone.Item2 != currentZone.Item2)
                 {
+                    Debug.Log("Entered Zone: " + zone.Item1 + "," + zone.Item2);
                     if (this.EnterZone != null)
                     {
                         EnterZone(zone.Item1, zone.Item2);

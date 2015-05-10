@@ -3,14 +3,17 @@ using System.Collections;
 
 namespace Universe.Game
 { 
-
     public class GameConstants : IGameConstants 
     {
+        public GameConstants() 
+        { 
+            
+        }
+
         public float ZoneSize
         {
             get { return 100f; }
         }
-
 
         public float SnapBackWorldDistance
         {

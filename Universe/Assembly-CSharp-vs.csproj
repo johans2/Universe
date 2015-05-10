@@ -61,14 +61,13 @@
      <Compile Include="Assets\Scripts\Core\Tuple.cs" />
      <Compile Include="Assets\Scripts\GameConstants.cs" />
      <Compile Include="Assets\Scripts\IGameConstants.cs" />
-     <Compile Include="Assets\Scripts\IInjectedClass.cs" />
      <Compile Include="Assets\Scripts\ISpaceCraft.cs" />
-     <Compile Include="Assets\Scripts\InjectedClass.cs" />
-     <Compile Include="Assets\Scripts\PlaneBehaviour.cs" />
      <Compile Include="Assets\Scripts\SpaceCraft.cs" />
+     <Compile Include="Assets\Scripts\SpaceCraftBehaviour.cs" />
      <Compile Include="Assets\Scripts\Startup\Bootstrapper.cs" />
-     <Compile Include="Assets\Scripts\TestIocBehaviour.cs" />
      <Compile Include="Assets\Scripts\Zone\IZone.cs" />
+     <Compile Include="Assets\Scripts\Zone\IZoneFactory.cs" />
+     <Compile Include="Assets\Scripts\Zone\IZoneManager.cs" />
      <Compile Include="Assets\Scripts\Zone\Orbital\IOrbital.cs" />
      <Compile Include="Assets\Scripts\Zone\Orbital\RockyPlanet.cs" />
      <Compile Include="Assets\Scripts\Zone\SystemCenter\BlueGiantStar.cs" />
@@ -81,6 +80,7 @@
      <Compile Include="Assets\Scripts\Zone\SystemCenter\YellowStar.cs" />
      <Compile Include="Assets\Scripts\Zone\Zone.cs" />
      <Compile Include="Assets\Scripts\Zone\ZoneFactory.cs" />
+     <Compile Include="Assets\Scripts\Zone\ZoneManager.cs" />
      <Compile Include="Assets\UnityTestTools\Assertions\AssertionComponent.cs" />
      <Compile Include="Assets\UnityTestTools\Assertions\AssertionException.cs" />
      <Compile Include="Assets\UnityTestTools\Assertions\Assertions.cs" />

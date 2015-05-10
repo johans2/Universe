@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Universe.Core.DependencyInjection;
+using Universe.Game;
 
 public class Bootstrapper : AbstractBootstrapper
 {
 	public override void Configure(IIoCContainer container)
 	{
-        container.Register<IInjectedClass, InjectedClass>();
+        container.Register<IGameConstants, GameConstants>();
+        container.Register<ISpaceCraft, SpaceCraft>();
 
 		// Example code
 		/*

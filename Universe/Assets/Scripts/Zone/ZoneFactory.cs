@@ -4,7 +4,7 @@ using Universe.Core.Generation;
 
 namespace Universe.Game
 {
-    public class ZoneFactory
+    public class ZoneFactory : IZoneFactory
     {
 		private const int maxSeedValue = 20000;
 		private ISystemCenterFactory systemCenterFactory;

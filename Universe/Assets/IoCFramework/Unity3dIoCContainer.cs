@@ -245,9 +245,17 @@ namespace Universe.Core.DependencyInjection
 	
 		private object Setup (Type type)
 		{
-			var instance = Activator.CreateInstance (type);
-			this.Inject (type, instance);
-			return instance;
+            ConstructorInfo[] constructorInfo = type.GetConstructors();
+
+            // This makes sure the non-default constructor runs. For now it does not support constructor arguments.
+            var instance = constructorInfo[0].Invoke(new object[]{});
+            this.Inject(type, instance);
+            return instance;
+            
+            // This is the old code that ran. It only used the default constructor.
+			//var instance = Activator.CreateInstance (type);
+			//this.Inject (type, instance);
+			//return instance;
 		}
 	
 		private static void Guard (bool failed, string format, params object[] args)

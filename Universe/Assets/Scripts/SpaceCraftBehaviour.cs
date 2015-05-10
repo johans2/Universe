@@ -1,7 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Universe.Core.DependencyInjection;
+using Universe.Game;
 
-public class PlaneBehaviour : MonoBehaviour {
+
+public class SpaceCraftBehaviour : MonoBehaviour 
+{
+    [Dependency] public ISpaceCraft spaceCraft;
 
     public float MoveSpeed = 0.1f;
     public float Deceleration = 0.06f;
@@ -20,11 +25,14 @@ public class PlaneBehaviour : MonoBehaviour {
     }
 
 	void Start () {
+        this.Inject();
         this.move = false;
         this.decelerate = false;
 	}
 	
 	void Update () {
+        spaceCraft.TransformPosition = new Vector2(transform.position.x, transform.position.z);
+
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
