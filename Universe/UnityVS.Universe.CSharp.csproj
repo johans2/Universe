@@ -7,16 +7,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{1F734E56-8C12-143C-01F4-29579FBA1DDA}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <AssemblyName>Assembly-CSharp</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.0.1f1</UnityVersion>
@@ -80,6 +78,8 @@
     <Compile Include="Assets\Scripts\SpaceCraft.cs" />
     <Compile Include="Assets\Scripts\SpaceCraftBehaviour.cs" />
     <Compile Include="Assets\Scripts\Startup\Bootstrapper.cs" />
+    <Compile Include="Assets\Scripts\SystemCenterBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Zone\Coord.cs" />
     <Compile Include="Assets\Scripts\Zone\IZone.cs" />
     <Compile Include="Assets\Scripts\Zone\IZoneFactory.cs" />
     <Compile Include="Assets\Scripts\Zone\IZoneManager.cs" />

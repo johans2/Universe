@@ -16,7 +16,7 @@ namespace Universe.Game
 
         public IZone CreateZone(int coordX, int coordY) 
         {
-            Zone zone = new Zone();
+            Zone zone = new Zone(coordX, coordY);
             int[] seeds = RandomGenerator.GeneratePRandomSerie(coordX, coordY, maxSeedValue, 10);
 			double distance = Math.Sqrt(Math.Pow(coordX,2) + Math.Pow(coordY,2));
 			

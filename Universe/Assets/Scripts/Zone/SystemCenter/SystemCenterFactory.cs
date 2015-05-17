@@ -27,8 +27,8 @@ namespace Universe.Game
 					}
 				}
 			}
-			
-            return null;			
+
+            return null;
 		}
 		
         // TODO: register systemcenters some other way.

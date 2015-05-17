@@ -65,6 +65,8 @@
      <Compile Include="Assets\Scripts\SpaceCraft.cs" />
      <Compile Include="Assets\Scripts\SpaceCraftBehaviour.cs" />
      <Compile Include="Assets\Scripts\Startup\Bootstrapper.cs" />
+     <Compile Include="Assets\Scripts\SystemCenterBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Zone\Coord.cs" />
      <Compile Include="Assets\Scripts\Zone\IZone.cs" />
      <Compile Include="Assets\Scripts\Zone\IZoneFactory.cs" />
      <Compile Include="Assets\Scripts\Zone\IZoneManager.cs" />

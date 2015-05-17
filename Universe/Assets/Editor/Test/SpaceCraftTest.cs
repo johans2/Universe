@@ -113,13 +113,13 @@ namespace Universe.Test
             ISpaceCraft spaceCraft = container.Resolve<ISpaceCraft>();
 
             int numEventsFired = 0;
-            int zoneX = 0;
-            int zoneY = 0;
+            int newZoneX = 0;
+            int newZoneY = 0;
 
-            spaceCraft.EnterZone += delegate(int x, int y) 
+            spaceCraft.EnterZone += delegate(Tuple<int,int> oldZone , Tuple<int,int> newZone) 
             {
-                zoneX = x;
-                zoneY = y;
+                newZoneX = newZone.Item1;
+                newZoneY = newZone.Item2;
                 numEventsFired++;
             };
 
@@ -132,8 +132,8 @@ namespace Universe.Test
                 spaceCraft.TransformPosition = newPos;
             }
 
-            Assert.AreEqual(0, zoneX);
-            Assert.AreEqual(1, zoneY);
+            Assert.AreEqual(0, newZoneX);
+            Assert.AreEqual(1, newZoneY);
             Assert.AreEqual(1, numEventsFired);
 
             // move right to 1,1
@@ -143,8 +143,8 @@ namespace Universe.Test
                 spaceCraft.TransformPosition = newPos;
             }
 
-            Assert.AreEqual(1, zoneX);
-            Assert.AreEqual(1, zoneY);
+            Assert.AreEqual(1, newZoneX);
+            Assert.AreEqual(1, newZoneY);
             Assert.AreEqual(2, numEventsFired);
 
             // move down to 1,-2
@@ -154,8 +154,8 @@ namespace Universe.Test
                 spaceCraft.TransformPosition = newPos;
             }
 
-            Assert.AreEqual(1, zoneX);
-            Assert.AreEqual(-2, zoneY);
+            Assert.AreEqual(1, newZoneX);
+            Assert.AreEqual(-2, newZoneY);
             Assert.AreEqual(5, numEventsFired);
 
             // move down to -1,-2
@@ -165,8 +165,8 @@ namespace Universe.Test
                 spaceCraft.TransformPosition = newPos;
             }
 
-            Assert.AreEqual(-1, zoneX);
-            Assert.AreEqual(-2, zoneY);
+            Assert.AreEqual(-1, newZoneX);
+            Assert.AreEqual(-2, newZoneY);
             Assert.AreEqual(7, numEventsFired);
 
             // move up again to -1,0
@@ -176,8 +176,8 @@ namespace Universe.Test
                 spaceCraft.TransformPosition = newPos;
             }
 
-            Assert.AreEqual(-1, zoneX);
-            Assert.AreEqual(0, zoneY);
+            Assert.AreEqual(-1, newZoneX);
+            Assert.AreEqual(0, newZoneY);
             Assert.AreEqual(9, numEventsFired);
 
         }

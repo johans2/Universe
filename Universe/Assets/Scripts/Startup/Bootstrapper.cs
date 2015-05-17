@@ -9,6 +9,8 @@ public class Bootstrapper : AbstractBootstrapper
 	{
         container.Register<IGameConstants, GameConstants>();
         container.Register<ISpaceCraft, SpaceCraft>();
+        container.Register<IZoneManager, ZoneManager>();
+        container.Register<IZoneFactory, ZoneFactory>();
 
 		// Example code
 		/*

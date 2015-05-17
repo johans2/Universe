@@ -58,7 +58,7 @@ namespace Universe.Game
                     Debug.Log("Entered Zone: " + zone.Item1 + "," + zone.Item2);
                     if (this.EnterZone != null)
                     {
-                        EnterZone(zone.Item1, zone.Item2);
+                        EnterZone(currentZone, zone);
                     }
                 }
                 

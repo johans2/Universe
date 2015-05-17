@@ -4,7 +4,7 @@ using Universe.Core.Collections;
 
 namespace Universe.Game
 {
-    public delegate void EnterZoneDelegate(int zoneX, int zoneY);
+    public delegate void EnterZoneDelegate(Tuple<int,int> oldZone, Tuple<int,int> newZone);
     public delegate void SnapBackWorldDelegate();
 
     public interface ISpaceCraft

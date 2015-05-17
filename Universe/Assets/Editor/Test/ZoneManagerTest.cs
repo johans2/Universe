@@ -11,7 +11,7 @@ using Universe.Test;
 namespace Assets.Editor.Test
 {
     [TestFixture]
-    public class SpaceCraftTest
+    public class ZoneManagerTest
     {
         private Unity3dIoCContainer container;
 
@@ -31,24 +31,42 @@ namespace Assets.Editor.Test
         public void OnEnterZoneTest()
         {
             ZoneManager zoneManager = container.Resolve<IZoneManager>() as ZoneManager;
-            
-            int zoneX = 1;
-            int zoneY = 1;
-            Object[] zoneCords = new Object[] { zoneX, zoneY };
-            
-            // Execute private method OnEnterZone
-            TestHelper.executeMethod(zoneManager, "OnEnterZone", zoneCords);
 
             // Get private field activeZones
-            Dictionary<Tuple<int, int>, IZone> activeZones = TestHelper.getField(zoneManager, "activeZones") as Dictionary<Tuple<int, int>, IZone>;
+            List<IZone> activeZones = TestHelper.getField(zoneManager, "activeZones") as List<IZone>;
 
-            activeZones.Add(new Tuple<int,int>(0,0), new Zone() as IZone);
+            Object[] zoneCords = new Object[] { new Tuple<int, int>(0, 0), new Tuple<int, int>(0, 0) };
+            
+            // Execute private method OnEnterZone(0,0)
+            TestHelper.executeMethod(zoneManager, "OnEnterZone", zoneCords);
+            
+            Assert.IsTrue( activeZones.Exists(zone => zone.X == 0 && zone.Y == 0));
+            Assert.IsTrue( activeZones.Exists(zone => zone.X == 1 && zone.Y == 0));
+            Assert.IsTrue( activeZones.Exists(zone => zone.X == 1 && zone.Y == 1));
+            Assert.IsTrue( activeZones.Exists(zone => zone.X == 0 && zone.Y == 1));
+            Assert.IsTrue( activeZones.Exists(zone => zone.X == -1 && zone.Y == 1));
+            Assert.IsTrue( activeZones.Exists(zone => zone.X == -1 && zone.Y == 0));
+            Assert.IsTrue( activeZones.Exists(zone => zone.X == -1 && zone.Y == -1));
+            Assert.IsTrue( activeZones.Exists(zone => zone.X == 0 && zone.Y == -1));
+            Assert.IsTrue( activeZones.Exists(zone => zone.X == 1 && zone.Y == -1));
 
-            Assert.IsTrue(activeZones.ContainsKey(new Tuple<int,int>(0,0)));
+            // Check that new zones are added and that the correct ones are removed
+            zoneCords = new object[] { new Tuple<int, int>(0, 0), new Tuple<int, int>(1, 0) };
+            TestHelper.executeMethod(zoneManager, "OnEnterZone", zoneCords);
 
+            Assert.IsTrue(activeZones.Exists(zone => zone.X == 0 && zone.Y == 0));
+            Assert.IsTrue(activeZones.Exists(zone => zone.X == 1 && zone.Y == 0));
+            Assert.IsTrue(activeZones.Exists(zone => zone.X == 1 && zone.Y == 1));
+            Assert.IsTrue(activeZones.Exists(zone => zone.X == 0 && zone.Y == 1));
+            Assert.IsTrue(activeZones.Exists(zone => zone.X == 0 && zone.Y == -1));
+            Assert.IsTrue(activeZones.Exists(zone => zone.X == 1 && zone.Y == -1));
+            Assert.IsTrue(activeZones.Exists(zone => zone.X == 2 && zone.Y == 1));
+            Assert.IsTrue(activeZones.Exists(zone => zone.X == 2 && zone.Y == 0));
+            Assert.IsTrue(activeZones.Exists(zone => zone.X == 2 && zone.Y == -1));
 
-            int a = 1;
-
+            Assert.IsFalse(activeZones.Exists(zone => zone.X == -1 && zone.Y == 1));
+            Assert.IsFalse(activeZones.Exists(zone => zone.X == -1 && zone.Y == 0));
+            Assert.IsFalse(activeZones.Exists(zone => zone.X == -1 && zone.Y == -1));
         }
 
         [TestFixtureTearDown]

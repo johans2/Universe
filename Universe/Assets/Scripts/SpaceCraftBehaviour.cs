@@ -7,6 +7,7 @@ using Universe.Game;
 public class SpaceCraftBehaviour : MonoBehaviour 
 {
     [Dependency] public ISpaceCraft spaceCraft;
+    [Dependency] public IZoneManager zoneManager { get; private set; }
 
     public float MoveSpeed = 0.1f;
     public float Deceleration = 0.06f;
@@ -28,6 +29,8 @@ public class SpaceCraftBehaviour : MonoBehaviour
         this.Inject();
         this.move = false;
         this.decelerate = false;
+
+        spaceCraft.EnterZone += zoneManager.OnEnterZone;
 	}
 	
 	void Update () {
